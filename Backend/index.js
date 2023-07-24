@@ -20,6 +20,7 @@ const corsOptions ={
 }
 
 app.use(cors(corsOptions))
+
 // -------------To tell that we will get json ----------------
 app.use(express.json()) 
 //  ------------------------------- Setting DB -------------------------------
