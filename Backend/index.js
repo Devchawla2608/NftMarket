@@ -12,10 +12,14 @@ const app = express();
 
 // ---------------------- Cors -------------------------- 
 
-var cors = require('cors')
+const cors=require("cors");
+const corsOptions ={
+   origin:'*', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
 
-app.use(cors()) // Use this after the variable declaration
-
+app.use(cors(corsOptions))
 // -------------To tell that we will get json ----------------
 app.use(express.json()) 
 //  ------------------------------- Setting DB -------------------------------
