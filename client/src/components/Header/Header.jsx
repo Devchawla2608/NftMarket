@@ -25,10 +25,6 @@ const NAV__LINKS = [
     display: "Explore",
     url: "/Explore",
   },
-  {
-    display: "Profile",
-    url: "/Profile",
-  },
 ];
 
 const Header = () => {

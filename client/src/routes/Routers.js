@@ -13,21 +13,22 @@ import NftDetails from "../pages/NftDetails";
 import Explore from "../pages/Explore.jsx";
 import Profile from "../pages/Profile.jsx";
 import Post from "../pages/Post.jsx";
+import PrivateRoute from "./PrivateRoute.jsx";
 
 const Routers = () => {
   return (
     <Routes>
       <Route path="/" element={<SignIn/>} />
-      <Route path="/sign-up" element={<SignUp/>} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/market" element={<Market />} />
-      <Route path="/create" element={<Create />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/wallet" element={<Wallet />} />
-      <Route path="/market/:id" element={<NftDetails />} />
-      <Route path="/Explore" element={<Explore />} />
-      <Route path="/Profile" element={<Profile />} />
-      <Route path="/post" element={<Post />} />
+      <Route path="/sign-up" element={ <SignUp/>} />
+      <Route path="/home" element={       <PrivateRoute> <Home />  </PrivateRoute> } />
+      <Route path="/market" element={<PrivateRoute> <Market />  </PrivateRoute>} />
+      <Route path="/create" element={<PrivateRoute> <Create />  </PrivateRoute>} />
+      <Route path="/contact" element={<PrivateRoute> <Contact />  </PrivateRoute>} />
+      <Route path="/wallet" element={<PrivateRoute> <Wallet />  </PrivateRoute>} />
+      <Route path="/market/:id" element={<PrivateRoute> <NftDetails />  </PrivateRoute>} />
+      <Route path="/Explore" element={<PrivateRoute> <Explore />  </PrivateRoute>} />
+      <Route path="/Profile" element={<PrivateRoute> <Profile />  </PrivateRoute>} />
+      <Route path="/post" element={<PrivateRoute> <Post />  </PrivateRoute>} />
     </Routes>
   );
 };
